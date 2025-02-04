@@ -16,22 +16,10 @@ h6 {
     text-transform: uppercase;
 }
 
-.sidebar h3,
-.sidebar h4,
-.sidebar h5,
-.sidebar h6 {
-    color: #4a758b; /* #3C6478; */
-    text-transform: uppercase;
-}
-
-.main h4 {
-    margin: 0 0 5px 0;
-}
-
 hr {
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 30px 10px;
+    margin: 30px 20px;
 }
 
 header {
@@ -39,8 +27,21 @@ header {
     /* text-align: center; */
 }
 
+header h1, 
+header h2 {
+    padding-left: 10px;
+}
+
 main div {
     padding: 0 20px;
+}
+
+.sidebar h3,
+.sidebar h4,
+.sidebar h5,
+.sidebar h6 {
+    color: #4a758b; /* #3C6478; */
+    text-transform: uppercase;
 }
 
 .sidebar {
@@ -51,11 +52,19 @@ main div {
 }
 
 .sidebar section {
-    padding-bottom: 20px;
+    padding: 0 0 20px 10px;
 }
 
-.sidebar p {
+.main h2 {
     padding-left: 10px;
+}
+
+.main h3 {
+    margin: 5px 0 15px 0;
+}
+
+.main h4 {
+    margin: 0 0 5px 0;
 }
 
 .main {
@@ -68,6 +77,9 @@ main div {
 .main section {
     padding: 10px;
     margin-bottom: 20px;
+    background-color: #4a758b2a; /* #eae8e8; */
+    border: 1px solid #4a758b;
+    border-radius: 5px;
 }
 
 footer {
