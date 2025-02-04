@@ -55,6 +55,13 @@ main div {
     padding: 0 0 20px 10px;
 }
 
+.sidebar section ul {
+    margin-block-start: 0;
+    padding-inline-start: 30px;
+    /* list-style-type:square; */
+    /* padding: 0; */
+}
+
 .main h2 {
     padding-left: 10px;
 }
