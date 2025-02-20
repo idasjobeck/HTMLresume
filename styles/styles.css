@@ -1,14 +1,49 @@
 body {
     font-size: 1em;
     line-height: 1.3;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-h1,
-h2 {
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('/resources/keyboard_header.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    width: 100%;
+    color: white;
+    display: flex;
+    /* Add the blur effect */
+    /* filter: blur(4px);
+    -webkit-filter: blur(4px); */
+}
+
+header h1 {
+    color: whitesmoke;
+    font-size: 3.5em;
+    text-transform: uppercase;
+}
+
+header h2 {
+    color: whitesmoke;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+footer {
+    clear: both;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+h1 {
     color: #4a758b; /* #3C6478; */
     text-transform: uppercase;
 }
 
+h2,
 h3,
 h4,
 h5,
@@ -16,24 +51,42 @@ h6 {
     text-transform: uppercase;
 }
 
-hr {
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 30px 20px;
+a {
+    color: #4a758b; /* #3C6478; */
+    text-decoration: none;
 }
 
-header {
-    padding: 0 10px;
-    /* text-align: center; */
+a:hover {
+    color: #333; /* #3C6478; */
+    text-decoration: underline;
 }
 
-header h1, 
-header h2 {
-    padding-left: 10px;
+a:visited {
+    color: #224658; /* #3C6478; */
 }
 
-main div {
-    padding: 0 20px;
+.header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;;
+}
+
+.profile {
+    padding: 0 0 20px 0;
+    margin: 20px 20px 0 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.45);
+}
+
+.sidebar {
+    padding: 20px;
+    width: 100%;
 }
 
 .sidebar h3,
@@ -44,13 +97,6 @@ main div {
     text-transform: uppercase;
 }
 
-.sidebar {
-    float: left;
-    width: 200px;
-    padding: 10px;
-    margin-right: 25px;
-}
-
 .sidebar section {
     padding: 0 0 20px 10px;
 }
@@ -58,39 +104,125 @@ main div {
 .sidebar section ul {
     margin-block-start: 0;
     padding-inline-start: 25px;
-    /* list-style-type: none; */
+    line-height: 1.5;
 }
 
-.main h2 {
-    padding-left: 10px;
+.sidebar-list {
+    display: none;
+}
+
+.sidebar-list-subheading {
+    display: none;
+}
+
+.sidebar-heading-icon {
+    display: inline;
+}
+
+.main {
+    flex: 60%;
+    padding: 20px;
+}
+
+.main h1 {
+    font-size: 2em;
 }
 
 .main h3 {
-    margin: 5px 0 15px 0;
+    font-size: 1.1em;
+    margin: 0 0 5px 0; /* 5px 0 15px 0 */
 }
 
 .main h4 {
     margin: 0 0 5px 0;
 }
 
-.main {
-    float: left;
-    width: 800px;
-    padding: 0 10px;
-    margin-left: 10px;
-}
-
 .main section {
     padding: 10px;
     margin-bottom: 20px;
-    background-color: #4a758b2a; /* #eae8e8; */
-    border: 1px solid #4a758b;
-    border-radius: 5px;
+    /* background-color: #4a758b2a; #eae8e8; */
+    /* border: 1px solid #4a758b; */
+    /* border-radius: 5px; */
 }
 
-footer {
-    clear: both;
-    padding: 10px;
-    text-align: center;
-    font-size: 0.8em;
+#sidebar-heading-contact, #sidebar-heading-skills, #sidebar-heading-languages, #sidebar-heading-references {
+    display: block;
 }
+
+#sidebar-heading-contact:hover, #sidebar-heading-skills:hover, #sidebar-heading-languages:hover, #sidebar-heading-references:hover {
+    cursor: pointer;
+}
+
+#sidebar-list-contact {
+    list-style-type: none;
+    margin-block-start: 0;
+    padding-inline-start: 32px; /* 22px more padding to account for the chevron icon allowing collapse/expand of the list */
+}
+
+#sidebar-list-skills-1, #sidebar-list-skills-2, #sidebar-list-skills-3, #sidebar-list-skills-4, #sidebar-list-skills-5, #sidebar-list-languages, #sidebar-list-references {
+    margin-block-start: 0;
+    padding-inline-start: 52px; /* 22px more padding to account for the chevron icon allowing collapse/expand of the list */
+}
+
+#sidebar-subheading-skills-1, #sidebar-subheading-skills-2, #sidebar-subheading-skills-3, #sidebar-subheading-skills-4, #sidebar-subheading-skills-5 {
+    padding-inline-start: 32px; /* 22px more padding to account for the chevron icon allowing collapse/expand of the list */
+}
+
+
+/* Small device (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) {}
+
+/* Medium device (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar {
+        padding: 20px;
+        width: 250px;
+        margin-right: 25px;
+    }
+
+    .sidebar-list {
+        display: block;
+    }
+
+    .sidebar-list-subheading {
+        display: block;
+    }
+    
+    .sidebar-heading-icon {
+        display: none;
+    }
+
+    #sidebar-heading-contact:hover, #sidebar-heading-skills:hover, #sidebar-heading-languages:hover, #sidebar-heading-references:hover {
+        cursor: auto;
+    }
+
+    #sidebar-list-contact {
+        list-style-type: none;
+        margin-block-start: 0;
+        padding-inline-start: 10px;
+    }
+    
+    #sidebar-list-skills-1, #sidebar-list-skills-2, #sidebar-list-skills-3, #sidebar-list-skills-4, #sidebar-list-skills-5, #sidebar-list-languages, #sidebar-list-references {
+        margin-block-start: 0;
+        padding-inline-start: 30px;
+    }
+
+    #sidebar-subheading-skills-1, #sidebar-subheading-skills-2, #sidebar-subheading-skills-3, #sidebar-subheading-skills-4, #sidebar-subheading-skills-5 {
+        padding-inline-start: 10px;
+    }
+}
+
+/* Large device (desktops, 992px and up) */
+@media screen and (min-width: 992px) {}
+
+/* X-large device (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {}
+
+/* XX-Large device (larger desktops, 1400px and up) */
+@media screen and (min-width: 1400px) {}

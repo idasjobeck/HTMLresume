@@ -4,162 +4,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" 
+    <meta name="description"
         content="Ida Sjöbeck is a .NET developer with 20 years experience in a support job role, 15 of which working with relational databases performing CRUD operations and troubleshooting issues.">
     <link rel="stylesheet" href="styles/css-reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Barlow+Semi+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Barlow+Semi+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="collapsableSidebarItems.js"></script>
     <title>Ida Sjöbeck - .NET developer</title>
 </head>
 
 <body class="barlow-regular">
-    <header>
-        <img src="resources/keyboard_header.jpg" alt="Close-up black and white photo of a computer keyboard."
-            width="100%">
-        <h1>Ida Sjöbeck</h1>
-        <h2>.NET developer</h2>
+    <header class="header barlow-semi-condensed-bold">
+        <!-- Header with image and title -->
+        <div>
+            <h1>Ida Sjöbeck</h1>
+            <h2>.NET developer</h2>
+        </div>
     </header>
     <main>
-        <div>
-            <p>Highly motivated and service-minded individual with attention to detail. 20 years experience in a support
-                job role, 15 of which working with relational databases performing CRUD operations and troubleshooting issues, with a
-                structured approach to problem solving. Always eager to learn new skills as well as building on existing knowledge.
-                Currently studying a 2-year .NET developer YH-course at IT-Högskolan in Stockholm, due to graduate May
-                2026.<br/>
-                <span class="barlow-semibold">Looking for internship (LIA) in autumn 2025 (for a period of 12 weeks, 08-Sep – 28-Nov).</span></p>
-        </div>
-        <hr/>
-        <div class="sidebar barlow-semi-condensed-regular">
-            <section>
-                <!-- Contact -->
-                <h3 id="contact">Contact</h3>
-                <address>
-                    <p><i class="bi bi-phone"></i> <a href="tel:+46736486795">+46 (0)763 486795</a></p>
-                    <p><i class="bi bi-envelope-at"></i> <a
-                            href="mailto:ida.sjobeck@gmail.com">ida.sjobeck@gmail.com</a></p>
-                    <p><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/ida-sjobeck">
-                            Ida Sjobeck</a></p>
-                    <p><i class="bi bi-github"></i> <a href="https://github.com/idasjobeck">github.com/idasjobeck</a>
-                    </p>
-                </address>
-            </section>
-            <section>
-                <!-- Skills -->
-                <h3 id="skills">Skills</h3>
-                    <span class="barlow-semibold">Programming languages:</span> <!-- #C, SQL, T-SQL, JavaScript -->
-                <ul>
-                    <li>C#</li>
-                    <li>SQL</li>
-                    <li>T-SQL</li>
-                    <li>JavaScript</li>
-                </ul>
-                    <span class="barlow-semibold">Other languages:</span> <!-- HTML5, CSS -->
-                    <ul>
+        <div class="row">
+            <!-- Profile at the top of the page -->
+            <div class="profile">
+                <p>Highly motivated and service-minded individual with attention to detail. 20 years experience in a
+                    support
+                    job role, 15 of which working with relational databases performing CRUD operations and
+                    troubleshooting issues, with a
+                    structured approach to problem solving. Always eager to learn new skills as well as building on
+                    existing knowledge.
+                    Currently studying a 2-year .NET developer YH-course at IT-Högskolan in Stockholm, due to graduate
+                    May
+                    2026.<br />
+                    <span class="barlow-semibold">Looking for internship (LIA) in autumn 2025 (for a period of 12 weeks,
+                        08-Sep – 28-Nov).</span>
+                </p>
+            </div>
+            <!-- Sidebar -->
+            <div class="sidebar barlow-semi-condensed-regular">
+                <section>
+                    <!-- Contact details -->
+                    <h3 id="sidebar-heading-contact"><i id="sidebar-heading-icon-contact"
+                            class="sidebar-heading-icon bi bi-chevron-right"></i> Contact</h3>
+                    <address>
+                        <ul id="sidebar-list-contact" class="sidebar-list">
+                            <li><i class="bi bi-phone"></i> <a href="tel:+46736486795">+46 (0)763 486795</a></li>
+                            <li><i class="bi bi-envelope-at"></i> <a
+                                    href="mailto:ida.sjobeck@gmail.com">ida.sjobeck@gmail.com</a></li>
+                            <li><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/ida-sjobeck">
+                                    Ida Sjobeck</a></li>
+                            <li><i class="bi bi-github"></i> <a
+                                    href="https://github.com/idasjobeck">github.com/idasjobeck</a></li>
+                        </ul>
+                    </address>
+                </section>
+                <section>
+                    <!-- Skills -->
+                    <h3 id="sidebar-heading-skills"><i id="sidebar-heading-icon-skills" class="sidebar-heading-icon bi bi-chevron-right"></i>
+                        Skills</h3>
+                    <span id="sidebar-subheading-skills-1" class="barlow-semibold sidebar-list-subheading">Programming languages:</span>
+                    <!-- #C, SQL, T-SQL, JavaScript -->
+                    <ul id="sidebar-list-skills-1" class="sidebar-list">
+                        <li>C#</li>
+                        <li>SQL</li>
+                        <li>T-SQL</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <span id="sidebar-subheading-skills-2" class="barlow-semibold sidebar-list-subheading">Other languages:</span>
+                    <!-- HTML5, CSS -->
+                    <ul id="sidebar-list-skills-2" class="sidebar-list">
                         <li>HTML5</li>
                         <li>CSS</li>
                         <li>JSON</li>
                         <li>XML</li>
                     </ul>
-                    <span class="barlow-semibold">Frameworks:</span> <!-- .NET, Entity Framework, Blazor, Vue.js (React/Angular) -->
-                    <ul>
+                    <span id="sidebar-subheading-skills-3" class="barlow-semibold sidebar-list-subheading">Frameworks:</span>
+                    <!-- .NET, Entity Framework, Blazor, Vue.js (React/Angular) -->
+                    <ul id="sidebar-list-skills-3" class="sidebar-list">
                         <li>.NET</li>
                         <li>Entity Framework</li>
                         <li>Blazor</li>
                         <li>Vue.js (React/Angular)</li>
                     </ul>
-                    <span class="barlow-semibold">Tools:</span> <!-- Git, Github, PowerShell -->
-                    <ul>
+                    <span id="sidebar-subheading-skills-4" class="barlow-semibold sidebar-list-subheading">Tools:</span>
+                    <!-- Git, Github, PowerShell -->
+                    <ul id="sidebar-list-skills-4" class="sidebar-list">
                         <li>Git</li>
                         <li>Github</li>
                         <li>PowerShell</li>
                     </ul>
-                    <span class="barlow-semibold">Other:</span> <!-- JSON, relational databases, Azure, Agile development (Scrum, Kanban, CI/CD), ITIL awareness -->
-                    <ul>
+                    <span id="sidebar-subheading-skills-5" class="barlow-semibold sidebar-list-subheading">Other:</span>
+                    <!-- JSON, relational databases, Azure, Agile development (Scrum, Kanban, CI/CD), ITIL awareness -->
+                    <ul id="sidebar-list-skills-5" class="sidebar-list">
                         <li>WebAPI / API</li>
                         <li>Relational databases</li>
                         <li>Azure</li>
                         <li>Agile development (Scrum, Kanban, CI/CD)</li>
                         <li>ITIL awareness</li>
                     </ul>
-                <span class="barlow-semibold">Languages:</span>
-                <ul>
-                    <li>Swedish (mother tongue)</li>
-                    <li>English (fluent)</li>
-                </ul>
-            </section>
-            <section>
-                <!-- References -->
-                <h3 id="references">References</h3>
-                <p>Available upon request.</p>
-            </section>
-        </div>
-        <div class="main">
-            <article>
-                <!-- Education -->
-                <h2 id="education">Education</h2>
-                <section>
-                    <h3>.NET developer</h3>
-                    <h4>IT-Högskolan (Stockholm, Sweden)</h4>
-                    <span class="barlow-semibold">Aug-2024 - May-2026</span>
-                    <p><span class="barlow-medium">1st year courses:</span> Programming in C# • Development with databases and database
-                        administration • Web development with .NET • Agile development • Clean code and
-                        testable code</p>
-                    <p><span class="barlow-medium">2nd year courses:</span> LIA1 (internship, 12 weeks) • Customer understanding, consultancy,
-                        and reporting • LIA2 (internship, 16 weeks) • Degree Project</p>
                 </section>
                 <section>
-                    <h3>Bsc. Joint Hons. in Applied Computing with Information and Communication Technology</h3>
-                    <h4>Middlesex University (London, UK)</h4>
-                    <span class="barlow-semibold">Sep-1999 - Jun-2002</span>
-                    <p>Upper Second (2:1) grade awarded; transcript provided upon request.<br/>
-                        Also completed 'Certificate in Advanced English' (2001); 'A' grade awarded.
-                    </p>
+                    <!-- Languages -->
+                    <h3 id="sidebar-heading-languages"><i id="sidebar-heading-icon-languages"
+                            class="sidebar-heading-icon bi bi-chevron-right"></i> Languages</h3>
+                    <ul id="sidebar-list-languages" class="sidebar-list">
+                        <li>Swedish (mother tongue)</li>
+                        <li>English (fluent)</li>
+                    </ul>
                 </section>
-                <!-- <section>
+                <section>
+                    <!-- References -->
+                    <h3 id="sidebar-heading-references"><i id="sidebar-heading-icon-references"
+                            class="sidebar-heading-icon bi bi-chevron-right"></i> References</h3>
+                    <ul id="sidebar-list-references" class="sidebar-list">
+                        <li>Available upon request.</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="main">
+                <article>
+                    <!-- Education -->
+                    <h1 id="education">Education</h1>
+                    <section>
+                        <h2>.NET developer</h2>
+                        <h3>IT-Högskolan (Stockholm, Sweden)</h3>
+                        <span class="barlow-semibold">Aug-2024 - May-2026</span>
+                        <p><span class="barlow-medium">1st year courses:</span> Programming in C# • Development with
+                            databases and database
+                            administration • Web development with .NET • Agile development • Clean code and
+                            testable code</p>
+                        <p><span class="barlow-medium">2nd year courses:</span> LIA1 (internship, 12 weeks) • Customer
+                            understanding, consultancy,
+                            and reporting • LIA2 (internship, 16 weeks) • Degree Project</p>
+                    </section>
+                    <section>
+                        <h2>Bsc. Joint Hons. in Applied Computing with Information and Communication Technology</h2>
+                        <h3>Middlesex University (London, UK)</h3>
+                        <span class="barlow-semibold">Sep-1999 - Jun-2002</span>
+                        <p>Upper Second (2:1) grade awarded; transcript provided upon request.<br />
+                            Also completed 'Certificate in Advanced English' (2001); 'A' grade awarded.
+                        </p>
+                    </section>
+                    <!-- <section>
                     <h3>Cambridge Certificate in Advanced English</h3>
                     <h4>Middlesex University (London, UK)</h4>
                     <span class="barlow-semibold">2001</span>
                     <p>'A' grade awarded</p>
                 </section> -->
-                <section>
-                    <h3>Natural Science Programme (A Levels equivalent)</h3>
-                    <h4>Värmdö Gymnasium (Stockholm, Sweden)</h4>
-                    <span class="barlow-semibold">Aug-1995 - May-1998</span>
-                    <p>Transcript provided upon request.</p>
-                </section>
-            </article>
-            <article>
-                <!-- Experience -->
-                <h2 id="experience">Experience</h2>
-                <section>
-                    <h3>Senior Technical Support Analyst</h3>
-                    <h4>Calyx (Nottingham, UK)</h4>
-                    <span class="barlow-semibold">Jan-2009 - Apr-2024</span>
-                    <p>Expertise in managing complex technical incidents for Calyx-supported systems and
-                        applications (IRT, RTSM, EDC). Responsible for ensuring timely resolution of helpdesk
-                        issues, identifying process improvements, and troubleshooting issues. Mentored new
-                        team members, and continuously sought to expand knowledge for departmental benefit.</p>
-                </section>
-                <section>
-                    <h3>Nordic Technical Advisor</h3>
-                    <h4>The TechGuys (Nottingham, UK)</h4>
-                    <span class="barlow-semibold">Jun-2004 - Sep-2008</span>
-                    <p>Provided technical support for customers of the DSGi group (PC World, Dixons,
-                        Currys.digital, Elkjop, Elgiganten, PC City, and Gigantti); mainly in Swedish, but also in
-                        English.</p>
-                </section>
-                <section>
-                    <h3>Shop Assistant</h3>
-                    <h4>Mix-Max (Stockholm, Sweden)</h4>
-                    <span class="barlow-semibold">May-1998 - Jan-1999</span>
-                    <p>Worked as a shop assistant part time throughout most of my A-levels equivalent education as
-                        well as full time for nine months before moving to England to go to university.</p>
-                </section>
-            </article>
+                    <section>
+                        <h2>Natural Science Programme (A Levels equivalent)</h2>
+                        <h3>Värmdö Gymnasium (Stockholm, Sweden)</h3>
+                        <span class="barlow-semibold">Aug-1995 - May-1998</span>
+                        <p>Transcript provided upon request.</p>
+                    </section>
+                </article>
+                <article>
+                    <!-- Experience -->
+                    <h1 id="experience">Experience</h1>
+                    <section>
+                        <h2>Senior Technical Support Analyst</h2>
+                        <h3>Calyx (Nottingham, UK)</h3>
+                        <span class="barlow-semibold">Jan-2009 - Apr-2024</span>
+                        <p>Expertise in managing complex technical incidents for Calyx-supported systems and
+                            applications (IRT, RTSM, EDC). Responsible for ensuring timely resolution of helpdesk
+                            issues, identifying process improvements, and troubleshooting issues. Mentored new
+                            team members, and continuously sought to expand knowledge for departmental benefit.</p>
+                    </section>
+                    <section>
+                        <h2>Nordic Technical Advisor</h2>
+                        <h3>The TechGuys (Nottingham, UK)</h3>
+                        <span class="barlow-semibold">Jun-2004 - Sep-2008</span>
+                        <p>Provided technical support for customers of the DSGi group (PC World, Dixons,
+                            Currys.digital, Elkjop, Elgiganten, PC City, and Gigantti); mainly in Swedish, but also in
+                            English.</p>
+                    </section>
+                    <section>
+                        <h2>Shop Assistant</h2>
+                        <h3>Mix-Max (Stockholm, Sweden)</h3>
+                        <span class="barlow-semibold">May-1998 - Jan-1999</span>
+                        <p>Worked as a shop assistant part time throughout most of my A-levels equivalent education as
+                            well as full time for nine months before moving to England to go to university.</p>
+                    </section>
+                </article>
+            </div>
         </div>
     </main>
     <footer class="barlow-semi-condensed-light">
