@@ -101,22 +101,34 @@ a:visited {
     padding: 0 0 20px 10px;
 }
 
-.sidebar section ul {
-    margin-block-start: 0;
-    padding-inline-start: 25px;
-    line-height: 1.5;
-}
-
-.sidebar-list {
-    display: none;
-}
-
-.sidebar-list-subheading {
-    display: none;
-}
-
 .sidebar-heading-icon {
     display: inline;
+}
+
+ul.sidebar-list {
+    line-height: 1.5;
+    padding-inline-start: 32px; /* 22px more padding to account for the chevron icon allowing collapse/expand of the list */
+    margin-block-start: 0;
+}
+
+.sidebar-list li {
+    margin-block-start: 0;
+    margin-inline-start: 20px; /* margin between the start of the list item and the start of the text */
+}
+
+.sidebar-list-contacts li {
+    list-style-type: none;
+    margin-inline-start: 0;
+}
+
+.sidebar-list-skills li:nth-child(1),
+.sidebar-list-skills li:nth-child(6),
+.sidebar-list-skills li:nth-child(11),
+.sidebar-list-skills li:nth-child(16),
+.sidebar-list-skills li:nth-child(20) {
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-inline-start: 0;
 }
 
 .main {
@@ -145,27 +157,12 @@ a:visited {
     /* border-radius: 5px; */
 }
 
-#sidebar-heading-contact, #sidebar-heading-skills, #sidebar-heading-languages, #sidebar-heading-references {
-    display: block;
+.hidden {
+    display: none;
 }
 
 #sidebar-heading-contact:hover, #sidebar-heading-skills:hover, #sidebar-heading-languages:hover, #sidebar-heading-references:hover {
     cursor: pointer;
-}
-
-#sidebar-list-contact {
-    list-style-type: none;
-    margin-block-start: 0;
-    padding-inline-start: 32px; /* 22px more padding to account for the chevron icon allowing collapse/expand of the list */
-}
-
-#sidebar-list-skills-1, #sidebar-list-skills-2, #sidebar-list-skills-3, #sidebar-list-skills-4, #sidebar-list-skills-5, #sidebar-list-languages, #sidebar-list-references {
-    margin-block-start: 0;
-    padding-inline-start: 52px; /* 22px more padding to account for the chevron icon allowing collapse/expand of the list */
-}
-
-#sidebar-subheading-skills-1, #sidebar-subheading-skills-2, #sidebar-subheading-skills-3, #sidebar-subheading-skills-4, #sidebar-subheading-skills-5 {
-    padding-inline-start: 32px; /* 22px more padding to account for the chevron icon allowing collapse/expand of the list */
 }
 
 
@@ -190,8 +187,8 @@ a:visited {
         display: block;
     }
 
-    .sidebar-list-subheading {
-        display: block;
+    ul.sidebar-list {
+        padding-inline-start: 10px;
     }
     
     .sidebar-heading-icon {
@@ -200,21 +197,6 @@ a:visited {
 
     #sidebar-heading-contact:hover, #sidebar-heading-skills:hover, #sidebar-heading-languages:hover, #sidebar-heading-references:hover {
         cursor: auto;
-    }
-
-    #sidebar-list-contact {
-        list-style-type: none;
-        margin-block-start: 0;
-        padding-inline-start: 10px;
-    }
-    
-    #sidebar-list-skills-1, #sidebar-list-skills-2, #sidebar-list-skills-3, #sidebar-list-skills-4, #sidebar-list-skills-5, #sidebar-list-languages, #sidebar-list-references {
-        margin-block-start: 0;
-        padding-inline-start: 30px;
-    }
-
-    #sidebar-subheading-skills-1, #sidebar-subheading-skills-2, #sidebar-subheading-skills-3, #sidebar-subheading-skills-4, #sidebar-subheading-skills-5 {
-        padding-inline-start: 10px;
     }
 }
 
