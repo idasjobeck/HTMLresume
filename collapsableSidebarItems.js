@@ -24,22 +24,3 @@ const toggleSidebarItem = (id) => {
         list.classList.toggle('hidden');
     }
 }
-
-
-const resetSidebarItemsToDisplayAll = () => {
-    document.querySelectorAll('.sidebar-list').forEach(list => list.style.display = 'block');
-    document.querySelectorAll('.sidebar-list-subheading').forEach(subHeading => subHeading.style.display = 'block');
-}
-
-
-const resetSidebarItemsToDisplayNone = () => {
-    document.querySelectorAll('.sidebar-heading-icon').forEach(icon => {
-        if (icon.classList.contains('bi-chevron-down')) {
-            icon.classList.remove('bi-chevron-down');
-            icon.classList.add('bi-chevron-right');
-        }
-    });
-
-    document.querySelectorAll('.sidebar-list').forEach(list => list.style.display = 'none');
-    document.querySelectorAll('.sidebar-list-subheading').forEach(subHeading => subHeading.style.display = 'none');
-}
