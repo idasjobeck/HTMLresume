@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('/resources/keyboard_header.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('/resources/keyboard_header_sm.jpg');
     background-size: cover;
     background-position: center;
     height: 250px;
@@ -171,6 +171,10 @@ ul.sidebar-list {
 
 /* Medium device (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
+    header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('/resources/keyboard_header_lg.jpg');
+    }
+
     .row {
         display: flex;
         flex-direction: row;

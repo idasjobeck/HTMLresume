@@ -6,21 +6,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 const addSidebarItemEventListeners = () => {
-    document.querySelector('#sidebar-heading-contact').addEventListener('click', () => toggleSidebarItem('contact'));
-    document.querySelector('#sidebar-heading-skills').addEventListener('click', () => toggleSidebarItem('skills'));
-    document.querySelector('#sidebar-heading-languages').addEventListener('click', () => toggleSidebarItem('languages'));
-    document.querySelector('#sidebar-heading-references').addEventListener('click', () => toggleSidebarItem('references'));
+    document.querySelector('#sidebar-heading-contact').addEventListener('click', toggleSidebarItem);
+    document.querySelector('#sidebar-heading-skills').addEventListener('click', toggleSidebarItem);
+    document.querySelector('#sidebar-heading-languages').addEventListener('click', toggleSidebarItem);
+    document.querySelector('#sidebar-heading-references').addEventListener('click', toggleSidebarItem);
 }
 
+document.addEventListener('DOMContentLoaded', addSidebarItemEventListeners);
 
-const toggleSidebarItem = (id) => {
-    
-    if (window.innerWidth < 768) {
-        const headingIcon = document.querySelector(`#sidebar-heading-icon-${id}`);
-        const list = document.querySelector(`#sidebar-list-${id}`);
-        
-        headingIcon.classList.toggle('bi-chevron-down');
-        headingIcon.classList.toggle('bi-chevron-right');
-        list.classList.toggle('hidden');
-    }
+const toggleSidebarItem = (event) => {
+    if (window.innerWidth >= 768) return;
+
+    const item = event.target.id.replace('sidebar-heading-', '');
+    const headingIcon = document.querySelector(`#sidebar-heading-icon-${item}`);
+    const list = document.querySelector(`#sidebar-list-${item}`);
+
+    headingIcon.classList.toggle('bi-chevron-down');
+    headingIcon.classList.toggle('bi-chevron-right');
+    list.classList.toggle('hidden');
 }
